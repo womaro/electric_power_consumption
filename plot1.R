@@ -21,5 +21,7 @@ introdata$Date <- as.Date(introdata$Date, "%d/%m/%Y")
 
 introdata <- subset(introdata, Date == "2007-02-01" | Date == "2007-02-02")
 
-par(mar = c(6,10,4,10))
 hist(introdata$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main =  "Global Active Power")
+
+dev.copy(png, file = "plot1.PNG")
+dev.off()
